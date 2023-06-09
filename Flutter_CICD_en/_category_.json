@@ -1,0 +1,8 @@
+{
+  "label": "Flutter CI/CD",
+  "position": 3,
+  "link": {
+    "type": "generated-index",
+    "description": "Proceso de integración contínua"
+  }
+}
