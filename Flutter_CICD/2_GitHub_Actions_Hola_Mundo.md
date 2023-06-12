@@ -28,7 +28,7 @@ De esta forma podríamos pensar, por ejemplo, en enviar un mensaje de Slack a nu
 
 ## :computer: Workflows
 
-Los flujos de trabajo o Workflows son una serie de trabajos que se ejecutan luego de ocurrido un evento, por ej: despues de un push. Los workflows son estructurados en archivos __YAML__ dentro de un subdirectorio especial (en donde GitHub Actions leera los mismos) que por defecto es .github.
+Los flujos de trabajo o Workflows son una serie de trabajos que se ejecutan luego de ocurrido un evento, por ej: despues de un push. Los workflows son estructurados en archivos __YAML__ dentro de un subdirectorio especial (en donde GitHub Actions leera los mismos) que por defecto es `.github`.
 
 Puede haber más de un archivo __YAML__ dentro de la carpeta, indicando que existen más de un workflow, que inclusive pueden estar disparados por el mismo evento. Estos nos permite organizar nuestros workflow de manera ordenada con una buena división responsabilidades entre ellos.
 
@@ -37,7 +37,7 @@ Dentro de los Workflows, existen distintos __trabajos (Jobs)__ que su vez tienen
 
 ## :runner: Runners
 
-A esta altura se preguntaran, "muy lindo todo... pero ¿como trabaja por dentro, que es lo que permite ejecutar los Jobs de los Workflows?". La respuesta es Runners. Estos son maquinas virtuales con Linux o MacOS o Windows que se crean cuando reciben un evento y que internamente tienen instalado un software llamado GitHub Action runner, el cual nos permite ejecutar nuestros Jobs. Los runners también tienen instalados un stack de software comunmente utilizado para desarrollo:
+A esta altura se preguntaran, "muy lindo todo... pero ¿como trabaja por dentro, que es lo que permite ejecutar los Jobs de los Workflows?". La respuesta es Runners. Estos son maquinas virtuales con Linux, MacOS o Windows que se crean cuando reciben un evento y que internamente tienen instalado un software llamado GitHub Action runner, el cual nos permite ejecutar nuestros Jobs. Los runners también tienen instalados un stack de software comunmente utilizado para desarrollo:
 
 - curl, npm, git, yarn, pip.
 - python, ruby, nodeJS.
@@ -45,7 +45,7 @@ A esta altura se preguntaran, "muy lindo todo... pero ¿como trabaja por dentro,
 
 ## :hammer: Manos a la obra
 
-Llegó la hora, Basta de tanto texto abstracto, comencemos a crear nuestro primer Workflow y aprendamos con ejemplos.
+Llegó la hora. Basta de tanto texto abstracto, comencemos a crear nuestro primer Workflow y aprendamos con ejemplos.
 
 Comenzaremos creando el repositorio en nuestra cuenta de GitHub (creense una cuenta en caso de no tenerla), para lo cual podemos acceder a https://github.com/new. En mi caso llamaré al repositorio __cicd__.
 
@@ -72,7 +72,7 @@ Antes de comenzar a trabajar con el archivo __YAML__ les recomiendo instalar la 
     Publisher: Red Hat
     VS Marketplace Link: https://marketplace.visualstudio.com/items?itemName=redhat.vscode-yaml
 
-Comenzaremos creando el primer __Workflow__, al cual llamaremos ```hello_world.yml```.
+Comenzaremos creando el primer __Workflow__, al cual llamaremos `hello_world.yml`.
 
 ```bash
 mkdir .github
@@ -82,7 +82,7 @@ cd workflows
 nano hello_world.yml
 ```
 
-y escribiremos las siguiente líneas de código.
+y en él escribiremos las siguientes líneas de código.
 
 ```yml
 name: Shell Commands # Nombre del workflow.
@@ -118,7 +118,7 @@ jobs:
         run: bash
 ```
 
-Luego, después de grabar los cambios, realizaremos el ```commit``` y el ```push``` de los cambios.
+Luego, después de grabar los cambios, realizaremos el `commit` y el `push` de los cambios.
 
 ```bash
 git add .
@@ -130,7 +130,7 @@ En la pestaña de Actions en nuestro proyecto de GitHub veremos los resultados d
 
 ![workflow result](2.2_workflow_results.png)
 
-==NOTA: se puede ver como los trabajos han sido ejecutados uno a continuación del otro. Por defecto, al declarar los trabajos, estos se ejecutan siguiendo un orden secuencial.==
+__NOTA:__ se puede ver como los trabajos han sido ejecutados uno a continuación del otro. Por defecto, al declarar los trabajos, estos se ejecutan siguiendo un orden secuencial.
 
 Si hacemos click dentro de cada __Job__ veremos las salidas de cada uno.
 
@@ -138,7 +138,7 @@ Si hacemos click dentro de cada __Job__ veremos las salidas de cada uno.
 
 ![workflow result](2.1_run_windows_commands.png)
 
-En el tercer paso del trabajo __run-linux-commands__ se puede ver un etiqueta especial ```shell```, la cual está instruyendo a GitHub Actions a que ejecute el commando en otra consola, en este caso __Python__. El mismo resultado se podría obtener si se crea un archivo ```hola_mundo.py``` que contenga las líneas:
+En el tercer paso del trabajo __run-linux-commands__ se puede ver un etiqueta especial `shell`, la cual está instruyendo a GitHub Actions a que ejecute el commando en otra consola, en este caso __Python__. El mismo resultado se podría obtener si se crea un archivo `hola_mundo.py` que contenga las líneas:
 
 ```python
 import platform
@@ -151,4 +151,4 @@ y ejecutando:
 python hola_mundo.py
 ```
 
-Hay muchos __shells__ disponibles dependiendo del sistema operativo que se utilice, estos están detallados en la documentación de GitHub [link](https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#using-a-specific-shell).
+Hay muchos __shells__ disponibles dependiendo del sistema operativo que se utilice, estos están detallados en la [documentación](https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#using-a-specific-shell) de GitHub.
