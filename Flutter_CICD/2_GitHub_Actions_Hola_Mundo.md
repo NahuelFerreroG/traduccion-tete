@@ -32,8 +32,7 @@ Los flujos de trabajo o Workflows son una serie de trabajos que se ejecutan lueg
 
 Puede haber más de un archivo __YAML__ dentro de la carpeta, indicando que existen más de un workflow, que inclusive pueden estar disparados por el mismo evento. Estos nos permite organizar nuestros workflow de manera ordenada con una buena división responsabilidades entre ellos.
 
-Dentro de los Workflows, existen distintos __trabajos (Jobs)__ que su vez tienen __pasos (Steps)__. A continuación se muestra el esquema de como está organizado un Workflow:
-
+Dentro de los Workflows, existen distintos __trabajos (Jobs)__ que su vez tienen __pasos (Steps)__. 
 
 ## :runner: Runners
 
@@ -103,7 +102,7 @@ jobs:
           npm -v
       - name: python Command # Tercer paso.
         run: |
-          import platform
+          import platformAhora voy a hacer un PR con toda la traducción para que lo puedas ver... 
           print(platform.processor())
         shell: python # Consola a utilizar.
   run-windows-commands: # Nombre del segundo trabajo.
@@ -138,7 +137,7 @@ Si hacemos click dentro de cada __Job__ veremos las salidas de cada uno.
 
 ![workflow result](2.1_run_windows_commands.png)
 
-En el tercer paso del trabajo __run-linux-commands__ se puede ver un etiqueta especial `shell`, la cual está instruyendo a GitHub Actions a que ejecute el commando en otra consola, en este caso __Python__. El mismo resultado se podría obtener si se crea un archivo `hola_mundo.py` que contenga las líneas:
+En el tercer paso del trabajo __run-shell-commands__ se puede ver un etiqueta especial `shell`, la cual está instruyendo a GitHub Actions a que ejecute el commando en otra consola, en este caso __Python__. El mismo resultado se podría obtener si se crea un archivo `hola_mundo.py` que contenga las líneas:
 
 ```python
 import platform

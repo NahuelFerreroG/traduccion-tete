@@ -9,7 +9,7 @@ title: 6. Bonus track
 
 In this section we want to leave you a very important action that will help you in your current projects. It is to build a preview of the project for each `pull request` action. This is a very good practice because we will have the evidence of how the application works with the introduced changes.
 
-El deploy de la web se utilizará la acción [FirebaseExtended/action-hosting-deploy](https://github.com/FirebaseExtended/action-hosting-deploy) que use Firebase Hosting para hostear nuestra página web sin costo. Entonces comenzaremos creando un proyecto nuevo en la plataforma.
+When deploying the website we will use the [FirebaseExtended/action-hosting-deploy](https://github.com/FirebaseExtended/action-hosting-deploy) action that Firebase Hosting uses to host our website free of charge. Then we will start by creating a new project on the platform.
 
 ## Creation of the Firebase project
 

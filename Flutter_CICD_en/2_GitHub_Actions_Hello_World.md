@@ -32,8 +32,7 @@ Workflows are a series of jobs that are executed after an event occurs, e.g. aft
 
 There can be more than one __YAML__ file inside the folder, indicating that there are more than one workflow, which can even be triggered by the same event. This allows us to organize our workflows in an organized way with a good division of responsibilities between them.
 
-Within the Workflows, there are different __Jobs,__ which in turn have __Steps,__. Below is a diagram of how a Workflow is organized:
-
+Within the Workflows, there are different __Jobs,__ which in turn have __Steps,__.
 
 ## :runner: Runners
 
@@ -138,7 +137,7 @@ If we click inside each __Job__ we will see the outputs of each one.
 
 ![workflow result](2.1_run_windows_commands.png)
 
-and running:
+In the third step of the __run-shell-commands__ job you can see a special `shell` tag, which is instructing GitHub Actions to run the command on another console, in this case __Python__. The same result could be obtained if you create a `hello_world.py` file containing the lines:
 
 ```python
 import platform
