@@ -7,27 +7,27 @@ title: 7. Challenge
 
 @Eugenio Tesio
 
-Está comprobado que la mejor forma de aprender es mediante los desafíos. Es muy conocida la frase "La necesidad es la madre de la invención", nosotros decimos también que "Los desafíos son la madre aprendizaje" ó "El enseñar es aprender", ya que es muy común en el area del software aprender conocimientos para uno mismo que es muy distinto de aprenderlos para enseñarlos. Es por esto que en este capítulo se le propone al estudiante un desafío para ponga a trabajar sus neuronas y sus manos en código, que es lo que más amamos.
+It is proven that the best way to learn is through challenges. At least in Spanish, it is well known the phrase "La necesidad es la madre de la invensión" which in English would be something like "Necessity is the mother of invention", we also say that "Challenges are the mother of learning" or "Teaching is learning", since it is very common in the software area to learn knowledge for oneself which is very different from learning it to teach it. That is why in this chapter we propose a challenge to the student to put his neurons and hands to work in code, which is what we love the most.
 
-## Objetivo
+## Objective
 
-Crear un workflow para ejecutar test de integración en la aplicación de contador guardando capturas de imágenes del estado inicial de la aplicación y luego de haber presionado el botón "+" para al menos 2 dispositivos Android.
+Create a workflow to run integration test on the counter application by saving screenshots of the initial state of the application and after pressing the "+" button for at least 2 Android devices.
 
-## Consignas de trabajo
+## Work assignments
 
-- Debe utilizar matrices para correr el test en distitos dispositivos.
-- Las imágenes capturas deben ser almacenadas en `screenshots/` y el directorio agregado el `.gitignore`.
-- Debe contener un `README.md` con la explicación de la resolución del challenge.
-- Debe estar un repositorio de GitHub público para que podamos compartir los links en éste curso.
-- Una vez finalizado avisar al equipo de Monkslab para revisión de código.
+- You must use arrays to run the test on different devices.
+- The captured images should be stored in `screenshots/` and the aggregate directory in `.gitignore`.
+- It must contain a `README.md` with the explanation of the challenge resolution.
+- It must be in a public GitHub repository so that we can share the links in this course.
+- Once finished, notify the Monkslab team for code review.
 
-## Material de apoyo
+## Supporting material
 
 - [An introduction to integration testing](https://docs.flutter.dev/cookbook/testing/integration/introduction).
 - [How to add Flutter integration test in a CI with GitHub Action ?](https://www.etiennetheodore.com/integration-testing-with-ci/).
 - [Test Flutter Apps on Android With GitHub Actions](https://betterprogramming.pub/test-flutter-apps-on-android-with-github-actions-abdba2137b4)
 - [GitHub Action - Android Emulator Runner](https://github.com/ReactiveCircus/android-emulator-runner).
 
-## Resolución
+## Solution
 
-🏃 Apurate que no nadie lo resolvió aún, mostrá que excelente desarrollador sos.
+🏃 Hurry up, no one has solved it yet, show what an excellent developer you are.

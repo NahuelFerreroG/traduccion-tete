@@ -16,7 +16,7 @@ Crear un workflow para ejecutar test de integración en la aplicación de contad
 ## Consignas de trabajo
 
 - Debe utilizar matrices para correr el test en distitos dispositivos.
-- Las imágenes capturas deben ser almacenadas en `screenshots/` y el directorio agregado el `.gitignore`.
+- Las imágenes capturas deben ser almacenadas en `screenshots/` y el directorio agregado en `.gitignore`.
 - Debe contener un `README.md` con la explicación de la resolución del challenge.
 - Debe estar un repositorio de GitHub público para que podamos compartir los links en éste curso.
 - Una vez finalizado avisar al equipo de Monkslab para revisión de código.

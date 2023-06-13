@@ -1,38 +1,37 @@
 ---
 sidebar_position: 5
-title: 5. Ejecutando acciones en localhost
+title: 5. Running actions on localhost
 ---
 
-# Ejecutando acciones en localhost
+# Running actions on localhost
 
 @Eugenio Tesio
 
-El primer poblema con el que tropezaremos a la hora de empezar a escribir nuestra propia GitHub Action es que resulta muy tedioso hacer push, pull requests, etc; para probar que nuestra acción funciona correctamente, sin mencionar lo mal y desprolijo que queda el historial de nuestro repositorio; algo que, siendo profesionales, debes cuidar.
+The first problem we will encounter when we start writing our own GitHub Action is that it is very tedious to make push, pull requests, etc; to test that our action works correctly, not to mention how bad and messy the history of our repository gets; something that, being professionals, we should take care of.
 
+## Installing and testing the tool
 
-## Instalando y probando la herramienta
+The tool to perform the tests locally is [act](https://github.com/nektos/act/). To install the tool it is necessary to have [Docker Desktop](https://docs.docker.com/desktop/) installed. To install it you only need to run:
 
-La herramienta para realizar las pruebas en forma local es [act](https://github.com/nektos/act/). Para instalar la herramienta es necesario tener [Docker Desktop](https://docs.docker.com/desktop/) instalado. Para instalarlo solo es necesario ejecutar:
-
-- MacOS (es necesario tener [Homebrew](https://brew.sh/) instalado)
+- MacOS (you must have [Homebrew](https://brew.sh/)) installed
 
     ```bash
     brew install act
     ```
 
-- Windows (es necesario tener [Chocolatey](https://docs.chocolatey.org/en-us/choco/setup) instalado)
+- Windows (you must have [Chocolatey](https://docs.chocolatey.org/en-us/choco/setup) installed)
 
     ```bash
     choco install act-cli
     ```
 
-Una vez instalada, probaremos si funciona correctamente. Ejecutando el siguiente comando en el root de nuestro proyecto para listar los Workflow disponibles:
+Once installed, we will test if it works correctly. Execute the following command in the root of our project to list the available Workflows:
 
 ```bash
 act -l
 ```
 
-El cual en nuestro proyecto de cicd debería arrojar la siguiente salida:
+Which in our cicd project should yield the following output:
 
 ```
 Stage  Job ID                Job name              Workflow name     Workflow file                 Events
@@ -42,23 +41,23 @@ Stage  Job ID                Job name              Workflow name     Workflow fi
 1      run-windows-commands  run-windows-commands  Shell Commands    hola_mundo.yml                push
 ```
 
-Esto prueba que la herramienta está funcionando correctamiente.
+This proves that the tool is working properly.
 
-## Corriendo el programa
+## Running the program
 
-Ejecutando la siguiente línea de comando ejecutaremos la acción `run-external-action`:
+With the following command line we will execute the action `run-external-action`:
 
 ```bash
 act -j run-external-action
 ```
 
-Para el caso del chipset M1 o superior de Apple, hay que agregarle `--container-architecture linux/arm64`:
+For Apple's M1 chipset or higher, the following must be added `--container-architecture linux/arm64`:
 
 ```bash
 act -j run-external-action --container-architecture linux/arm64
 ```
 
-La salida de la consola será:
+The console's output will be:
 
 ```bash
 [External Actions/run-external-action] 🚀  Start image=catthehacker/ubuntu:act-latest
@@ -81,11 +80,11 @@ La salida de la consola será:
 [External Actions/run-external-action] 🏁  Job succeeded
 ```
 
-Se puede ver como act crea 2 imagenes:
+You can see how act creates 2 images:
 
 - catthehacker/ubuntu.
 - act-eugeniotesio-hello-world-dart-action-v1-0-dockeraction.
 
-La primera es la herramienta __act__ en sí y la segunda es la imagen de nuestro proyecto. Si abren Docker Desktop, en la pestaña Images, verán 3 imágenes creadas, las 2 anteriores y una más de __Dart__ que es creada por la acción `EugenioTesio/hello-world-dart-action@v1`.
+The first one is the __act__ tool itself and the second one is the image of our project. If you open Docker Desktop, in the Images tab, you will see 3 images created, the 2 previous ones and one more of __Dart__ that is created by the action `EugenioTesio/hello-world-dart-action@v1`
 
 ![docker desktop images](5.1_docker_desktop_images.png)

@@ -46,7 +46,7 @@ Esto prueba que la herramienta está funcionando correctamiente.
 
 ## Corriendo el programa
 
-Ejecutando la siguiente línea de comando ejecutaremos la acción `run-external-action`:
+Con la siguiente línea de comando ejecutaremos la acción `run-external-action`:
 
 ```bash
 act -j run-external-action

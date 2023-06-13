@@ -25,7 +25,7 @@ En este punto ya tendremos creado nuestro proyecto para el autodeploy de nuestro
 
 ## Generación del autodeploy
 
-Con la herramienta de [Firebase CLI](https://firebase.google.com/docs/cli) podremos lograr nuestro objetivo de deplegar nuestro sitio web de previsualización en la acción de `pull request` y en la acción de `merge` con la rama principal.
+Con la herramienta de [Firebase CLI](https://firebase.google.com/docs/cli) podremos lograr nuestro objetivo de desplegar nuestro sitio web de previsualización en la acción de `pull request` y en la acción de `merge` con la rama principal.
 
 ### Instalación y cofiguración de Firebase CLI
 
@@ -195,8 +195,8 @@ git commit -m"despliegue automático"
 git push origin develop
 ```
 
-Por último, iremos a al repositorio de GitHub y crearemos un pull request de la rama `develop` a la rama `main`. Una vez creado el PR podremos ver en la pestaña Action de GitHub como se está ejecutando nuestro workflow. Al finalizar el mismo, podremos ver dentro del PR creado, el bot de `github-actions`, agrego un mensaje con la url de la vista previa de nuestro proyecto.
+Por último, iremos a al repositorio de GitHub y crearemos un pull request de la rama `develop` a la rama `main`. Una vez creado el PR podremos ver en la pestaña Action de GitHub como se está ejecutando nuestro workflow. Al finalizar el mismo, podremos ver dentro del PR creado que el bot de `github-actions` agregó un mensaje con la url de la vista previa de nuestro proyecto.
 
 ![Autodeploy success](6.1_autodeploy_success.png)
 
-Considermos muy importante poder contar con la vista previa de nuestro trabajo, facilita muchas detecciones de errores o incluso ajustes de UI antes del merge con la rama principal; por supuesto que está también la ventaja del ahorro de tiempo del equipo de trabajo.
+Consideramos muy importante poder contar con la vista previa de nuestro trabajo, facilita muchas detecciones de errores o incluso ajustes de UI antes del merge con la rama principal; por supuesto que está también la ventaja del ahorro de tiempo del equipo de trabajo.
